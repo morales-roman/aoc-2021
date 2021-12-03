@@ -1,7 +1,7 @@
 def do_list(itrr: str):
     return [itrr.split()[0],int(itrr.split()[1])]
 
-arr = list(map(do_list,open('second.txt').read().splitlines()))
+arr = list(map(do_list,open('2.txt').read().splitlines()))
 
 def first(arr):
     x,depth = 0,0

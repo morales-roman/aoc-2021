@@ -1,4 +1,4 @@
-arr = list(map(int,open('first.txt').read().splitlines()))
+arr = list(map(int,open('1.txt').read().splitlines()))
 
 def first_part(arr):
     count = 0 
