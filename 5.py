@@ -8,13 +8,13 @@ arr = list(map(do_list,open('5.txt').read().splitlines()))
 def build_terrain(arr, terrain) -> set:
     for line in arr:
         first_x,first_y,second_x,second_y = line[0][0], line[0][1], line[1][0], line[1][1]
+        # check if values are in a straight line
         if first_x == second_x or first_y == second_y:
             # check if value on x or y are going up or down and calculate range from there
             x_range = list(range(first_x, second_x-1, -1)) if first_x > second_x else list(range(first_x, second_x+1))
             y_range = list(range(first_y, second_y-1, -1)) if first_y > second_y else list(range(first_y, second_y+1))
             
             # populate all possible coordinates between points
-            # check if values are in a straight line
             if len(x_range) > len(y_range):
                 ranges = ["%s, %s" % (x_, y_range[0]) for x_ in x_range]
             else:
